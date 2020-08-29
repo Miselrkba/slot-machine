@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.win{
+  background: #61dafb;
+}
+
+.loose {
+  background: #282c34;
+}
