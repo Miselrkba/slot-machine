@@ -11,9 +11,17 @@ const POKE_API = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/`;
 
 export default class Pokedex extends Component {
   render() {
+    let title;
+    if (this.props.isWinner) {
+      title = <h1 className="winner">Winning hand</h1>;
+    } else {
+      title = <h1 className="looser">Loosing hand</h1>;
+    }
     return (
       <div>
-        <h1>Pokedex</h1>
+         {title}
+        <h4>Total Exp: {this.props.exp}</h4>
+       
         <div className="pokedex">
           {this.props.pokemon.map((element) => (
             <Pokecard

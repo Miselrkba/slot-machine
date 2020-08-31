@@ -13,7 +13,7 @@ class Pokegame extends React.Component {
       { id: 94, name: "Gengar", type: "poison", base_experience: 225 },
       { id: 133, name: "Eevee", type: "normal", base_experience: 65 },
     ],
-  }; 
+  };
   render() {
     let hand1 = [];
     let hand2 = [...this.props.pokemon];
@@ -26,16 +26,22 @@ class Pokegame extends React.Component {
       hand1.push(randPokemon);
       // so were removing it from hand2 putting it into hand1
       // and repeating it over and over
-      
     }
-    return( 
-    <div>
-        <Pokedex pokemon={hand1}/>
-        <Pokedex pokemon={hand2}/>
-    </div>)
+
+    // count total experience from hand1 array
+    // count experice for each pokemon start at 0
+    let exp1 = hand1.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
+    let exp2 = hand2.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
+
+    console.log(exp1);
+    console.log(exp2);
+    return (
+      <div>
+        <Pokedex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2}/>
+        <Pokedex pokemon={hand2} exp={exp2} isWinner={exp2 > exp1} />
+      </div>
+    );
   }
 }
 
 export default Pokegame;
-
-

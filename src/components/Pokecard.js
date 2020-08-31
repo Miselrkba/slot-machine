@@ -5,7 +5,9 @@ export const Pokecard = (props) => {
     <div>
       <div className="pokecard">
         <h3>{props.name}</h3>
+        <div className='pokeImg'>
         <img src={props.img} alt="pokemon" />
+        </div>
         <p>Type: {props.type}</p>
         <p>EXP: {props.exp}</p>
       </div>

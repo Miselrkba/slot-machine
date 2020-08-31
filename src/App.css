@@ -1,11 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  
 }
-h1{
+h1,
+h4 {
   text-align: center;
- 
 }
 
 .win {
@@ -24,7 +23,6 @@ h1{
 }
 
 .pokecard {
-  background: lightgray;
   border: 1px solid black;
   margin: 1em;
   border-radius: 2.3rem;
@@ -34,10 +32,35 @@ h1{
 
 .pokecard:hover {
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  border: 0.1rem solid teal;
+  /* border-radius: 50%;
+  border: 0.1rem solid teal; */
 }
 
-.pokecard h3{
+.pokecard h3 {
   color: blue;
+}
+
+.winner {
+  color: green;
+}
+.looser {
+  color: #e91e63;
+}
+
+.pokeImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background-color: #eceff1;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+.pokecard img:hover {
+  transform: scale(1.25);
+}
+
+.pokecard img {
+  transition: all ease 500ms;
 }
