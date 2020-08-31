@@ -26,10 +26,13 @@ class Pokegame extends React.Component {
       hand1.push(randPokemon);
       // so were removing it from hand2 putting it into hand1
       // and repeating it over and over
-      console.log(hand1);
-      console.log(hand2);
+      
     }
-    return <div>pokegame</div>;
+    return( 
+    <div>
+        <Pokedex pokemon={hand1}/>
+        <Pokedex pokemon={hand2}/>
+    </div>)
   }
 }
 
